@@ -1,0 +1,16 @@
+# Laminated veneer lumber members
+lvl_members:
+  - id: LVL_Alt_1
+    start_point: B1_top
+    end_point: lvl_alt1_end
+    size: "2-ply 1.75x11.875"
+    loads:
+      uniform_plf: 380
+    connection_detail: "Saddle at B1, continuous span"
+  - id: LVL_Alt_2
+    start_point: B2_top
+    end_point: lvl_alt2_end
+    size: "2-ply 1.75x11.875"
+    loads:
+      uniform_plf: 380
+    connection_detail: "Saddle at B2, continuous span"

@@ -1,0 +1,34 @@
+# Global coordinate points for structural elements
+points:
+  B1_base: {x: 0, y: 583, z: 0}
+  B1_top: {x: 0, y: 583, z: 144}
+  B2_base: {x: 0, y: 446, z: 0}
+  B2_top: {x: 0, y: 446, z: 144}
+  B3_base: {x: 0, y: 309, z: 0}
+  B3_top: {x: 0, y: 309, z: 144}
+  B4_base: {x: 0, y: 172, z: 0}
+  B4_top: {x: 0, y: 172, z: 144}
+  B5_base: {x: 0, y: 35, z: 0}
+  B5_top: {x: 0, y: 35, z: 144}
+  B6_base: {x: 0, y: 0, z: 0}
+  B6_top: {x: 0, y: 0, z: 144}
+  B7_base: {x: 91, y: 0, z: 0}
+  B7_top: {x: 91, y: 0, z: 144}
+  B8_base: {x: 204, y: 0, z: 0}
+  B8_top: {x: 204, y: 0, z: 144}
+  B9_base: {x: 389, y: 42, z: 0}
+  B9_top: {x: 389, y: 42, z: 144}
+  B10_base: {x: 389, y: 132, z: 0}
+  B10_top: {x: 389, y: 132, z: 144}
+  B11_base: {x: 389, y: 217, z: 0}
+  B11_top: {x: 389, y: 217, z: 144}
+  ridge_start: {x: 204, y: 0, z: 157}
+  ridge_end: {x: 580, y: 180, z: 157}
+  wall_ridge_start: {x: 0, y: 400, z: 154}
+  wall_ridge_end: {x: 580, y: 400, z: 154}
+  wall_master_east_start: {x: 580, y: 0, z: 144}
+  wall_master_east_end: {x: 580, y: 350, z: 144}
+  wall_south_start: {x: 204, y: 350, z: 144}
+  wall_south_end: {x: 580, y: 350, z: 144}
+  lvl_alt1_end: {x: 150, y: 514, z: 154}
+  lvl_alt2_end: {x: 150, y: 446, z: 154}

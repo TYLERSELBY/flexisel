@@ -1,0 +1,32 @@
+# Ridge beam and load-bearing walls
+components:
+  - id: Ridge_Master
+    type: ridge_beam
+    start_point: ridge_start
+    end_point: ridge_end
+    size: W14x34
+    loads:
+      uniform_plf: 895
+    supports: [B8_top, LB_Wall_Master_East]
+    connection_detail: "Knife plate connections"
+  - id: LB_Wall_Ridge
+    type: load_bearing_wall
+    start_point: wall_ridge_start
+    end_point: wall_ridge_end
+    framing: "2x6 studs 16 o.c."
+    foundation: continuous
+    notes: "Built-up posts at load points"
+  - id: LB_Wall_Master_East
+    type: load_bearing_wall
+    start_point: wall_master_east_start
+    end_point: wall_master_east_end
+    framing: "2x6 studs 16 o.c."
+    foundation: continuous
+    notes: "Ridge beam support post"
+  - id: LB_Wall_South
+    type: load_bearing_wall
+    start_point: wall_south_start
+    end_point: wall_south_end
+    framing: "2x6 studs 16 o.c."
+    foundation: continuous
+    notes: "Standard wall framing"
