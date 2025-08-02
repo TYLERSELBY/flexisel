@@ -14,6 +14,7 @@ This directory stores a simplified dataset for the example building using YAML f
 - `PARAMETERS.md` – dictionary of parameter names, types and units.
 - `structural_layout.html` – visual layout based on the same data.
 
+
 ### Validation
 
 JSON Schema files live in `schemas/` and can be used to ensure the YAML files
