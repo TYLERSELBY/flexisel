@@ -13,8 +13,7 @@ This directory stores a simplified dataset for the example building using YAML f
 - `roof_sections.yml` – roof sections with area and load path notes.
 - `PARAMETERS.md` – dictionary of parameter names, types and units.
 - `structural_layout.html` – visual layout based on the same data.
-- `editor.html` – interactive editor that renders members, allows parameter
-  edits with real-time load recalculation, and can export a change log.
+
 
 ### Validation
 

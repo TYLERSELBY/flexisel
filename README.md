@@ -94,3 +94,6 @@ The landscape responsive breakpoint will be applied when the screen width is gre
 And then this will be the only point at which Flexisel changes.
 
 [View Demo](http://9bitstudios.github.com/flexisel/) | [Buy Author a Coffee](https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=NNCJ79B2W6MUL)
+
+## Deflection Calculator
+A simple tool to estimate the maximum deflection of a simply supported beam with a center load is provided in [deflection-calculator.html](deflection-calculator.html).
