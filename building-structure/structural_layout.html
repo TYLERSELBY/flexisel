@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Roof Structure Layout</title>
+<style>
+body {font-family: Arial, sans-serif; margin:20px;background-color:#f5f5f5;}
+.container {max-width:1200px;margin:0 auto;background:white;padding:20px;border-radius:8px;box-shadow:0 2px 10px rgba(0,0,0,0.1);}
+.diagram {width:100%;height:800px;border:2px solid #333;position:relative;background:linear-gradient(to right,#f9f9f9 0%,#f9f9f9 100%);overflow:hidden;}
+.column {position:absolute;width:12px;height:12px;background-color:#e74c3c;border:2px solid #c0392b;border-radius:50%;transform:translate(-50%,-50%);}
+.column-label {position:absolute;font-size:10px;font-weight:bold;color:#2c3e50;transform:translate(-50%,-150%);background:rgba(255,255,255,0.9);padding:2px 4px;border-radius:3px;}
+.beam {position:absolute;height:3px;background-color:#3498db;border-radius:1px;}
+.beam-label {position:absolute;font-size:8px;color:#2980b9;transform:translate(-50%,-200%);background:rgba(255,255,255,0.8);padding:1px 3px;border-radius:2px;}
+.ridge-beam {position:absolute;height:4px;background-color:#9b59b6;border-radius:2px;}
+.load-bearing-wall {position:absolute;height:6px;background-color:#34495e;border-radius:1px;}
+.rafter {position:absolute;height:1px;background-color:#95a5a6;opacity:0.7;}
+.legend {margin-top:20px;display:flex;flex-wrap:wrap;gap:20px;}
+.legend-item {display:flex;align-items:center;gap:8px;}
+.legend-color {width:20px;height:12px;border-radius:2px;}
+.coordinates {margin-top:20px;display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:10px;font-size:12px;}
+.coord-item {background:#ecf0f1;padding:8px;border-radius:4px;}
+</style>
+</head>
+<body>
+<div class="container">
+<h1>Corrected Roof Structure Layout</h1>
+<div class="diagram" id="diagram"></div>
+<div class="legend">
+<div class="legend-item"><div class="legend-color" style="background-color:#e74c3c;border-radius:50%;"></div><span>HSS Columns</span></div>
+<div class="legend-item"><div class="legend-color" style="background-color:#3498db;"></div><span>W-Flange Beams</span></div>
+<div class="legend-item"><div class="legend-color" style="background-color:#9b59b6;"></div><span>Ridge Beam</span></div>
+<div class="legend-item"><div class="legend-color" style="background-color:#34495e;"></div><span>Load Bearing Walls</span></div>
+<div class="legend-item"><div class="legend-color" style="background-color:#95a5a6;"></div><span>Rafters (Sample)</span></div>
+</div>
+<div class="coordinates">
+<div class="coord-item"><strong>B1:</strong> (0", 583") - Northeast corner</div>
+<div class="coord-item"><strong>B2:</strong> (0", 446") - North wall</div>
+<div class="coord-item"><strong>B3:</strong> (0", 309") - North wall</div>
+<div class="coord-item"><strong>B4:</strong> (0", 172") - North wall</div>
+<div class="coord-item"><strong>B5:</strong> (0", 35") - North wall</div>
+<div class="coord-item"><strong>B6:</strong> (0", 0") - Northwest corner</div>
+<div class="coord-item"><strong>B7:</strong> (91", 0") - West wall</div>
+<div class="coord-item"><strong>B8:</strong> (204", 0") - West wall</div>
+<div class="coord-item"><strong>B9:</strong> (389", 42") - South wall</div>
+<div class="coord-item"><strong>B10:</strong> (389", 132") - South wall</div>
+<div class="coord-item"><strong>B11:</strong> (389", 217") - South wall</div>
+</div>
+<h2>Beam Specifications</h2>
+<div class="coordinates">
+<div class="coord-item"><strong>B1-B2:</strong> 11'5" span (Alternative framing)</div>
+<div class="coord-item"><strong>B2-B3:</strong> 11'5" span (7.7' rafters)</div>
+<div class="coord-item"><strong>B3-B4:</strong> 11'5" span (Mixed 7.7' & 16.9' rafters)</div>
+<div class="coord-item"><strong>B4-B5:</strong> 11'5" span (16.9' rafters)</div>
+<div class="coord-item"><strong>B5-B6:</strong> 2'11" span (16.9' rafters)</div>
+<div class="coord-item"><strong>B6-B7:</strong> 7'8" span (Curtain wall + overhang)</div>
+<div class="coord-item"><strong>B7-B8:</strong> 9'4" span (Curtain wall + overhang)</div>
+<div class="coord-item"><strong>B9-B10:</strong> 7'6" span (26.9' rafters to ridge)</div>
+<div class="coord-item"><strong>B10-B11:</strong> 7'1" span (26.9' rafters to ridge)</div>
+</div>
+</div>
+<script>
+const columns=[{id:'B1',x:50,y:750},{id:'B2',x:50,y:610},{id:'B3',x:50,y:470},{id:'B4',x:50,y:330},{id:'B5',x:50,y:190},{id:'B6',x:50,y:50},{id:'B7',x:140,y:50},{id:'B8',x:250,y:50},{id:'B9',x:470,y:90},{id:'B10',x:470,y:230},{id:'B11',x:470,y:320}];
+const beams=[{start:'B1',end:'B2',label:"B1-B2 (11'5")"},{start:'B2',end:'B3',label:"B2-B3 (11'5")"},{start:'B3',end:'B4',label:"B3-B4 (11'5")"},{start:'B4',end:'B5',label:"B4-B5 (11'5")"},{start:'B5',end:'B6',label:"B5-B6 (2'11")"},{start:'B6',end:'B7',label:"B6-B7 (7'8")"},{start:'B7',end:'B8',label:"B7-B8 (9'4")"},{start:'B9',end:'B10',label:"B9-B10 (7'6")"},{start:'B10',end:'B11',label:"B10-B11 (7'1")"}];
+const diagram=document.getElementById('diagram');
+columns.forEach(c=>{const el=document.createElement('div');el.className='column';el.style.left=c.x+'px';el.style.top=c.y+'px';diagram.appendChild(el);const lab=document.createElement('div');lab.className='column-label';lab.textContent=c.id;lab.style.left=c.x+'px';lab.style.top=c.y+'px';diagram.appendChild(lab);});
+beams.forEach(b=>{const s=columns.find(c=>c.id===b.start);const e=columns.find(c=>c.id===b.end);const el=document.createElement('div');el.className='beam';const dx=e.x-s.x;const dy=e.y-s.y;const len=Math.sqrt(dx*dx+dy*dy);const ang=Math.atan2(dy,dx)*180/Math.PI;el.style.left=s.x+'px';el.style.top=s.y+'px';el.style.width=len+'px';el.style.transformOrigin='0 50%';el.style.transform=`rotate(${ang}deg)`;diagram.appendChild(el);const lab=document.createElement('div');lab.className='beam-label';lab.textContent=b.label;lab.style.left=(s.x+e.x)/2+'px';lab.style.top=(s.y+e.y)/2+'px';diagram.appendChild(lab);});
+const ridge=document.createElement('div');ridge.className='ridge-beam';ridge.style.left='250px';ridge.style.top='200px';ridge.style.width='200px';ridge.style.transform='rotate(20deg)';diagram.appendChild(ridge);const ridgeLab=document.createElement('div');ridgeLab.className='beam-label';ridgeLab.textContent='Ridge Beam (26.9\' total)';ridgeLab.style.left='350px';ridgeLab.style.top='180px';ridgeLab.style.color='#8e44ad';diagram.appendChild(ridgeLab);const wall=document.createElement('div');wall.className='load-bearing-wall';wall.style.left='50px';wall.style.top='400px';wall.style.width='300px';diagram.appendChild(wall);const wallLab=document.createElement('div');wallLab.className='beam-label';wallLab.textContent='Load Bearing Wall at Ridge';wallLab.style.left='200px';wallLab.style.top='380px';wallLab.style.color='#2c3e50';diagram.appendChild(wallLab);const sampleRafters=[{start:{x:50,y:400},end:{x:50,y:310}},{start:{x:50,y:400},end:{x:250,y:200}},{start:{x:50,y:400},end:{x:470,y:300}}];sampleRafters.forEach(r=>{const el=document.createElement('div');el.className='rafter';const dx=r.end.x-r.start.x;const dy=r.end.y-r.start.y;const len=Math.sqrt(dx*dx+dy*dy);const ang=Math.atan2(dy,dx)*180/Math.PI;el.style.left=r.start.x+'px';el.style.top=r.start.y+'px';el.style.width=len+'px';el.style.transformOrigin='0 50%';el.style.transform=`rotate(${ang}deg)`;diagram.appendChild(el);});
+</script>
+</body>
+</html>

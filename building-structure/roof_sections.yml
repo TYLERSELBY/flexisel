@@ -1,0 +1,72 @@
+# Roof section data
+sections:
+  - id: Master-North-West
+    roof_system: Master/West Roof
+    description: North of ridge beam, B5-B6 span
+    supporting_structure: Ridge beam to north W-flange B5-B6
+    area_sf: 240
+    rafter_length_ft: 16.9
+    load_path: "Ridge beam -> North W-flange -> HSS B5, B6"
+  - id: Master-North-Central
+    roof_system: Master/West Roof
+    description: North of ridge beam, B4-B5 span
+    supporting_structure: Ridge beam to north W-flange B4-B5
+    area_sf: 320
+    rafter_length_ft: 16.9
+    load_path: "Ridge beam -> North W-flange -> HSS B4, B5"
+  - id: Master-North-Mixed
+    roof_system: Master/West Roof
+    description: North of ridge beam, B3-B4 span
+    supporting_structure: Ridge beam to north W-flange B3-B4
+    area_sf: 320
+    rafter_length_ft: 7.7/16.9
+    load_path: "Ridge beam -> North W-flange -> HSS B3, B4"
+  - id: Master-South
+    roof_system: Master/West Roof
+    description: South of ridge beam
+    supporting_structure: Ridge beam to south load bearing wall
+    area_sf: 580
+    rafter_length_ft: 15.4
+    load_path: "Ridge beam -> Load bearing wall"
+  - id: Bedrooms-North-East
+    roof_system: Bedrooms/East Roof
+    description: North of ridge wall, B2-B3 span
+    supporting_structure: Ridge wall to north W-flange B2-B3
+    area_sf: 180
+    rafter_length_ft: 7.7
+    load_path: "Ridge wall -> North W-flange -> HSS B2, B3"
+  - id: Bedrooms-Alt-Bay
+    roof_system: Bedrooms/East Roof
+    description: Alternative LVL framing B1-B2
+    supporting_structure: LVL members spanning over HSS columns
+    area_sf: 140
+    rafter_length_ft: 11.5
+    load_path: "LVL spans -> HSS B1 & B2"
+  - id: Bedrooms-South
+    roof_system: Bedrooms/East Roof
+    description: South of ridge wall
+    supporting_structure: Ridge wall to south load bearing wall
+    area_sf: 420
+    rafter_length_ft: 24.2
+    load_path: "Between load bearing walls"
+  - id: Clearstory-South
+    roof_system: Bedrooms/East Roof
+    description: Above clearstory glass B9-B11
+    supporting_structure: Clearstory beams to ridge beam
+    area_sf: 180
+    rafter_length_ft: 26.9
+    load_path: "B9-B11 beams -> Ridge beam"
+  - id: West-Overhang
+    roof_system: Both roofs
+    description: West overhang from B6-B7-B8
+    supporting_structure: Cantilevered from west beams
+    area_sf: 220
+    rafter_length_ft: "outriggers"
+    load_path: "West W-flanges"
+  - id: North-Overhang
+    roof_system: Both roofs
+    description: North overhang from all north beams
+    supporting_structure: Cantilevered from north beams
+    area_sf: 380
+    rafter_length_ft: "outriggers"
+    load_path: "North W-flanges"

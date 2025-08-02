@@ -1,0 +1,65 @@
+# W-flange beams between columns
+beams:
+  - id: WF_B1_B2
+    start_point: B1_top
+    end_point: B2_top
+    size: W8x15
+    loads:
+      uniform_plf: 520
+    connected_members: [B1, B2]
+  - id: WF_B2_B3
+    start_point: B2_top
+    end_point: B3_top
+    size: W8x15
+    loads:
+      uniform_plf: 680
+    connected_members: [B2, B3]
+  - id: WF_B3_B4
+    start_point: B3_top
+    end_point: B4_top
+    size: W10x17
+    loads:
+      uniform_plf: 1840
+    connected_members: [B3, B4]
+  - id: WF_B4_B5
+    start_point: B4_top
+    end_point: B5_top
+    size: W10x22
+    loads:
+      uniform_plf: 2580
+    connected_members: [B4, B5]
+  - id: WF_B5_B6
+    start_point: B5_top
+    end_point: B6_top
+    size: W8x18
+    loads:
+      uniform_plf: 2850
+    connected_members: [B5, B6]
+  - id: WF_B6_B7
+    start_point: B6_top
+    end_point: B7_top
+    size: W8x18
+    loads:
+      uniform_plf: 1120
+    connected_members: [B6, B7]
+  - id: WF_B7_B8
+    start_point: B7_top
+    end_point: B8_top
+    size: W10x17
+    loads:
+      uniform_plf: 1480
+    connected_members: [B7, B8]
+  - id: WF_B9_B10
+    start_point: B9_top
+    end_point: B10_top
+    size: LVL_5.5x14
+    loads:
+      uniform_plf: 1820
+    connected_members: [B9, B10]
+  - id: WF_B10_B11
+    start_point: B10_top
+    end_point: B11_top
+    size: LVL_5.5x14
+    loads:
+      uniform_plf: 1780
+    connected_members: [B10, B11]
