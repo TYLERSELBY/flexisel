@@ -1,0 +1,48 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "type": "object",
+  "required": ["columns"],
+  "properties": {
+    "columns": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["id", "start_point", "end_point", "size", "loads", "base_plate"],
+        "properties": {
+          "id": {"type": "string"},
+          "start_point": {"type": "string"},
+          "end_point": {"type": "string"},
+          "size": {"type": "string"},
+          "loads": {
+            "type": "object",
+            "properties": {
+              "gravity_lb": {"type": "number"},
+              "uplift_lb": {"type": "number"},
+              "lateral_ew_lb": {"type": "number"},
+              "lateral_ns_lb": {"type": "number"}
+            },
+            "additionalProperties": false
+          },
+          "base_plate": {
+            "type": "object",
+            "required": ["size", "edge_distance_in"],
+            "properties": {
+              "size": {"type": "string"},
+              "edge_distance_in": {
+                "type": "object",
+                "additionalProperties": {"type": "number"}
+              }
+            },
+            "additionalProperties": false
+          },
+          "connected_members": {
+            "type": "array",
+            "items": {"type": "string"}
+          }
+        },
+        "additionalProperties": false
+      }
+    }
+  },
+  "additionalProperties": false
+}

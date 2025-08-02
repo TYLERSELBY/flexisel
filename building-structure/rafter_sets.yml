@@ -1,0 +1,38 @@
+# Rafter series definitions
+rafter_sets:
+  - id: R169
+    start_member: Ridge_Master
+    end_member: WF_B4_B5
+    size: 2x12
+    spacing_in: 16
+    count: 42
+    loads:
+      point_lb: 580
+    connection_detail: "Top flange hanger to LUS210"
+  - id: R77
+    start_member: LB_Wall_Ridge
+    end_member: WF_B2_B3
+    size: 2x8
+    spacing_in: 16
+    count: 18
+    loads:
+      point_lb: 265
+    connection_detail: "Bearing on ridge wall to LUS26"
+  - id: R269
+    start_member: Ridge_Master
+    end_member: WF_B9_B10
+    size: 2x14
+    spacing_in: 24
+    count: 12
+    loads:
+      point_lb: 926
+    connection_detail: "Top flange hanger to ridge beam"
+  - id: Alt_R
+    start_member: LVL_Alt_1
+    end_member: LVL_Alt_2
+    size: 2x8
+    spacing_in: 16
+    count: 8
+    loads:
+      point_lb: 400
+    connection_detail: "LUS26 hangers to LVLs"

@@ -1,0 +1,157 @@
+# Hollow Structural Section columns
+columns:
+  - id: B1
+    start_point: B1_base
+    end_point: B1_top
+    size: 4x4x3/8
+    loads:
+      gravity_lb: 3950
+      uplift_lb: 280
+      lateral_ew_lb: 850
+      lateral_ns_lb: 1120
+    base_plate:
+      size: 8x8x1/2
+      edge_distance_in:
+        north: 5
+        east: 5
+    connected_members: [WF_B1_B2, LVL_Alt_1]
+  - id: B2
+    start_point: B2_base
+    end_point: B2_top
+    size: 4x4x3/8
+    loads:
+      gravity_lb: 4200
+      uplift_lb: 320
+      lateral_ew_lb: 920
+      lateral_ns_lb: 1080
+    base_plate:
+      size: 8x8x1/2
+      edge_distance_in:
+        north: 5
+    connected_members: [WF_B1_B2, WF_B2_B3, LVL_Alt_2]
+  - id: B3
+    start_point: B3_base
+    end_point: B3_top
+    size: 4x4x3/8
+    loads:
+      gravity_lb: 5850
+      uplift_lb: 380
+      lateral_ew_lb: 1240
+      lateral_ns_lb: 950
+    base_plate:
+      size: 8x8x1/2
+      edge_distance_in:
+        north: 5
+    connected_members: [WF_B2_B3, WF_B3_B4]
+  - id: B4
+    start_point: B4_base
+    end_point: B4_top
+    size: 4x4x3/8
+    loads:
+      gravity_lb: 7280
+      uplift_lb: 420
+      lateral_ew_lb: 1480
+      lateral_ns_lb: 880
+    base_plate:
+      size: 8x8x1/2
+      edge_distance_in:
+        north: 5
+    connected_members: [WF_B3_B4, WF_B4_B5]
+  - id: B5
+    start_point: B5_base
+    end_point: B5_top
+    size: 3.5x3.5x1/4
+    loads:
+      gravity_lb: 6950
+      uplift_lb: 480
+      lateral_ew_lb: 1640
+      lateral_ns_lb: 820
+    base_plate:
+      size: 8x8x1/2
+      edge_distance_in:
+        north: 5
+    connected_members: [WF_B4_B5, WF_B5_B6]
+  - id: B6
+    start_point: B6_base
+    end_point: B6_top
+    size: 4x4x3/8
+    loads:
+      gravity_lb: 5200
+      uplift_lb: 1200
+      lateral_ew_lb: 1640
+      lateral_ns_lb: 1850
+    base_plate:
+      size: 8x10x1/2
+      edge_distance_in:
+        north: 5
+        west: 5
+    connected_members: [WF_B5_B6, WF_B6_B7]
+  - id: B7
+    start_point: B7_base
+    end_point: B7_top
+    size: 3.5x3.5x1/4
+    loads:
+      gravity_lb: 2450
+      uplift_lb: 520
+      lateral_ns_lb: 1680
+    base_plate:
+      size: 6x8x1/2
+      edge_distance_in:
+        west: 5
+    connected_members: [WF_B6_B7, WF_B7_B8]
+  - id: B8
+    start_point: B8_base
+    end_point: B8_top
+    size: 4x4x3/8
+    loads:
+      gravity_lb: 12800
+      uplift_lb: 680
+      lateral_ns_lb: 1950
+    base_plate:
+      size: 8x8x1/2
+      edge_distance_in:
+        west: 5
+    connected_members: [WF_B7_B8, Ridge_Master]
+  - id: B9
+    start_point: B9_base
+    end_point: B9_top
+    size: 4x4x3/8
+    loads:
+      gravity_lb: 4850
+      uplift_lb: 340
+      lateral_ew_lb: 1420
+      lateral_ns_lb: 950
+    base_plate:
+      size: 8x8x1/2
+      edge_distance_in:
+        south: 5
+        east: 5
+    connected_members: [WF_B9_B10]
+  - id: B10
+    start_point: B10_base
+    end_point: B10_top
+    size: 4x4x3/8
+    loads:
+      gravity_lb: 5100
+      uplift_lb: 380
+      lateral_ew_lb: 1350
+      lateral_ns_lb: 820
+    base_plate:
+      size: 8x8x1/2
+      edge_distance_in:
+        east: 5
+    connected_members: [WF_B9_B10, WF_B10_B11]
+  - id: B11
+    start_point: B11_base
+    end_point: B11_top
+    size: 4x4x3/8
+    loads:
+      gravity_lb: 4720
+      uplift_lb: 350
+      lateral_ew_lb: 1280
+      lateral_ns_lb: 780
+    base_plate:
+      size: 8x8x1/2
+      edge_distance_in:
+        east: 5
+    connected_members: [WF_B10_B11]
